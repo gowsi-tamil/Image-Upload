@@ -6,9 +6,11 @@
             </div>
         </div>
     </div>
-
+  
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
+    var pngCount = <%= pngCount %>;
+    var jpegCount = <%= jpegCount %>;
         var ctx = document.getElementById('imageCountChart').getContext('2d');
 
         var myChart = new Chart(ctx, {
@@ -18,7 +20,7 @@
                 datasets: [{
                     label: 'Number of Images',
                     data: [
-                        `<%= pngCount %>, <%= jpegCount %>`
+                        pngCount,jpegCount 
                     ],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',

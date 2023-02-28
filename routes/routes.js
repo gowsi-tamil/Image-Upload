@@ -99,13 +99,12 @@ router.post('/update/:id', upload, (req, res)=>{
                 type: 'success',
                 message: 'User updated successfully',
             };
-            // res.redirect(`/edit/${id}`);
             res.redirect('/');
         }
     });
 });
 
-//
+
 
 router.get('/countImages', (req, res) => {
     let pngCount = 0;
